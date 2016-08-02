@@ -12,12 +12,31 @@
 
     <div id="container"></div>
 
+      <div id="list">
+        <li id="1"></li>
+      </div>
+
     <script type="text/babel">
-        ReactDOM.render(
-            <h2>Welcome to React!</h2>,
-            document.getElementById('container')
-        );
+    var Mango = React.createClass({
+      render: function(){
+        return (<div>
+          <h3>This is a simple component in react</h3>
+          <p>Hello</p>
+          </div>)
+      }
+    });
+    ReactDOM.render(<h1>Tyron</h1>, document.getElementById("container"));
+    ReactDOM.render(<Mango />, document.getElementById("1"));
+    
+//To display mulitple components in a parent div, wrap the compnents in a div in the ReactDOM.render Method ie.
+// ReactDOM.render(<div>
+//                    <Mango />
+//                    <Mango />
+//                    <Mango />
+//                 </div>,doument.getElementById('container'));
+
+
     </script>
 
-</body>
+  </body>
 </html>
